@@ -1,0 +1,7 @@
+public class ContactAndLeadSearch {
+  
+    public static list<list< sObject >> searchContactsAndLeads(String lastName){
+     
+        return [ Find : lastName IN ALL FIELDS RETURNING contact(name), lead (Name) ];
+  }   
+}
