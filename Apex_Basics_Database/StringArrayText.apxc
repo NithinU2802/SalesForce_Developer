@@ -17,3 +17,5 @@ public class StringArrayTest {
         }
 
     }
+
+Execute: List<String> values=StringArrayTest.generateStringArray(5);
