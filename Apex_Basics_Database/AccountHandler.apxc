@@ -1,0 +1,16 @@
+public class AccountHandler { 
+    public static Account insertNewAccount(String AccountName){
+        Account account = new Account(Name=AccountName);   
+        try{
+            insert account;
+        }
+        catch(Exception e){
+            return Null;
+        }
+        return account;
+    }
+}
+
+Execute: 
+  1. AccountHandler.insertNewAccount('new test account');
+  2. AccountHandler.insertNewAccount('');
