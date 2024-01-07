@@ -1,0 +1,8 @@
+public class DailyLeadProcessor implements Schedulable  {
+    Public void execute(SchedulableContext SC){
+        for(Lead i:[SELECT Id from Lead where LeadSource=null limit 200]){
+            i.LeadSource='Dreamforce';
+            update i;
+        }
+    }
+}
