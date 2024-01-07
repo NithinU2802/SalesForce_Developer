@@ -1,0 +1,27 @@
+@isTest
+public class AccountProcessorTest { 
+    @isTest
+    public static void testNoOfContacts(){
+        Account account = new Account();
+        account.Name = 'Test Account';
+        Insert account;
+        
+        Contact con = new Contact();
+        con.FirstName = 'Nithin';
+        con.LastName =  'Udhayakumar';
+        con.AccountId = account.Id;
+        
+        con = new Contact();
+        con.FirstName = 'mahendra_singh';
+        con.LastName = 'dhoni';
+        con.AccountId = account.Id;
+        
+        List<Id> res = new List<Id>();
+        res.add(account.Id);
+        
+        Test.startTest();
+        AccountProcessor.countContacts(res);
+        Test.stopTest();
+    }
+
+}
