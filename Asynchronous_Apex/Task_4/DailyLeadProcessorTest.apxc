@@ -1,0 +1,11 @@
+@isTest
+private class DailyLeadProcessorTest {
+	static testMethod void testDailyLeadProcessor() {
+		List<Lead> lst = new List<Lead>();
+	    for (Integer i = 0; i < 200; i++) 
+			lst.add(new Lead(LastName='Dreamforce'+i, Company='KRCT', Status='Open - Not Contacted'));
+		insert lst;
+		Test.startTest();
+		String jobId = System.schedule('DailyLeadProcessor', '0 0 1 * * ?', new DailyLeadProcessor()); 
+	}
+}
